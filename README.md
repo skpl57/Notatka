@@ -22,7 +22,7 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - git add/rm <file> -  zapisuje plik (commituje)
 - git restore <file> - usuwa niezapisane pliki (które nie były commitowane) -> wraca do poprzedniej wersji
 
-- mechaniktgmobile - konto Pani na gicie
+- mechaniktgmobilne - konto Pani na gicie
 
 --------------------------- Windows ---------------------------
 
