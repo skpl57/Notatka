@@ -10,6 +10,8 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 
 - git add . - dodaje wszystkie pliki
 - git commit -m "commit name"
+- stwórz puste repozytorium na githubie
+- skopiuj link
 - git push -u origin master (!!!MUSI BYĆ MASTER A NIE MAIN!!!)
 	
 	potem tylko:
