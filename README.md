@@ -31,6 +31,8 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - menedżer poświadczeń -> Pświadczenia systemu -> git.hub -> usuń dane!
 
 --------------------------- XML ---------------------------
+- katalog manifest - układ z XML'em
+
 - gravity - ustawia dziecko
 - layout_gravity - ustawia rodzica
 - backgroundTint - kolor tła dla przycisków
@@ -44,14 +46,15 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - dp - do rozmiarów, marginów itp
 
 - Res/drawable -> obrazy
-
+  
 --------------------------- Java ---------------------------
+- java\com.example.NazwaPliku\Main.java - główny plik kodu
+
 - Toast - dymek wiadomości
 
-- buton.setOnClickListner -> new View.OnClickListner  (lepsza praktyka klikania, w onCreate trzeba zrobić)
 - R - katalog "res" (można się odwołać do wielu rzeczy)
-- obiekt = findViewById(R.id.idObiektu) -> stworzenie obiektu z elementu z XML
-
+- obiekt = findViewById(R.id.idObiektu) -> stworzenie obiektu z elementu z XML (po odpowiedniej lini w onCreate)
+- przycisk.setOnClickListner -> new View.OnClickListner  (lepsza praktyka klikania, w onCreate trzeba zrobić)
   
 - onSaveInstanceState -> możliwość zapisywania rzeczy (z protected	)
 - outState.put...() -> 	wymagane zdefiniowanie co zapisujemy np putInt("ID", zmienna)
