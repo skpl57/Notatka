@@ -31,7 +31,10 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - menedżer poświadczeń -> Pświadczenia systemu -> git.hub -> usuń dane!
 
 --------------------------- XML ---------------------------
-- katalog manifest - układ z XML'em
+- katalog Res\layout - układ z XML'em
+- Res/drawable -> obrazy
+- Res (RClick) -> Image Asset - tworzenie nowej ikony
+- Manifest\AndroidManifes.xml - zmienia się ikone 1.icon i 2. iconRound
 
 - gravity - ustawia dziecko
 - layout_gravity - ustawia rodzica
@@ -43,10 +46,7 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - adjustViewBounds - dostosowuje do szerokoścki
   
 - sp - do tekstu
-- dp - do rozmiarów, marginów itp
-
-- Res/drawable -> obrazy
-  
+- dp - do rozmiarów, marginów itph  
 --------------------------- Java ---------------------------
 - java\com.example.NazwaPliku\Main.java - główny plik kodu
 
@@ -62,3 +62,8 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - savedInstanceState -> to obiekt, który ma wszystkie zapisane informacje z "put"
 - savedInstanceState.get...() -> pobiera zapisaną wartość po kluczu, należy podać typ pobieranej wartości np getInt("ID")
 
+- Intencja - znaczy co chcesz wykonać
+- Intent intencja = new Intent(Z czego, do czego) - np (MainActivity.this, InneActivity.class)
+- intencja.putExtra('KLUCZ', zmienna) - możliwość dodania argumentu 
+- startActivity(intencja) - otwiera nowe oknienko
+- zmienna = getIntent().get...Extra("KLUCZ", podstawowa wartość) ... -> typ danych
