@@ -46,7 +46,14 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - adjustViewBounds - dostosowuje do szerokoścki
   
 - sp - do tekstu
-- dp - do rozmiarów, marginów itph  
+- dp - do rozmiarów, marginów itph
+
+- Prawy na MainActivity/New/Activity/EmptyViewActivity -> do intencji 
+
+- ListView - do ładnego wypisywania list w aplikacj	
+- entries - bierze liste co ma wyświetlić (z string value)
+- divider - linia która odziela elementy (ustawia wartość koloru)
+- dividerHeight - ustawia grubość dividera
 --------------------------- Java ---------------------------
 - java\com.example.NazwaPliku\Main.java - główny plik kodu
 
@@ -67,3 +74,5 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - intencja.putExtra('KLUCZ', zmienna) - możliwość dodania argumentu 
 - startActivity(intencja) - otwiera nowe oknienko
 - zmienna = getIntent().get...Extra("KLUCZ", podstawowa wartość) ... -> typ danych
+
+- ListView.setOnItemClickListener(new AdapterView...) -> klikanie na konkretny elemnt listy
