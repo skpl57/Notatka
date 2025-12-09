@@ -76,3 +76,49 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - zmienna = getIntent().get...Extra("KLUCZ", podstawowa wartość) ... -> typ danych
 
 - ListView.setOnItemClickListener(new AdapterView...) -> klikanie na konkretny elemnt listy
+
+
+
+
+public static ArrayList<Przepis> getKategoriePrzepisu(String kategoria) {
+        ArrayList<Przepis> filtrowanePrzepisy = new ArrayList<>();
+        if(przepisy.isEmpty()){
+            generujPrzepisy();
+        }
+        for(int i = 0; i < przepisy.size(); i++){
+            if(Objects.equals(przepisy.get(i).getKategoria(), kategoria)){
+                filtrowanePrzepisy.add(przepisy.get(i));
+            }
+        }
+        return filtrowanePrzepisy;
+    }
+    public static ArrayList<String> getNazwyPrzepisow(String kategoria) {
+        ArrayList<String> filtrowaneNazwyPrzepisow = new ArrayList<>();
+        if(przepisy.isEmpty()){
+            generujPrzepisy();
+        }
+        for(int i = 0; i < przepisy.size(); i++){
+            if(Objects.equals(przepisy.get(i).getKategoria(), kategoria)){
+                filtrowaneNazwyPrzepisow.add(przepisy.get(i).getNazwaPrzepisu());
+            }
+        }
+        return filtrowaneNazwyPrzepisow;
+    }
+
+    public static Przepis zwrocPrzepis(int id){
+        if(przepisy.isEmpty()){
+            generujPrzepisy();
+        }
+        for (Przepis przepis:przepisy){
+            if(przepis.getIdPrzepisu() == id){
+                return przepis;
+            }
+        }
+        return przepisy.get(0);
+    }
+
+
+
+
+}
+
