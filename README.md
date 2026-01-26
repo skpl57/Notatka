@@ -51,9 +51,13 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - Prawy na MainActivity/New/Activity/EmptyViewActivity -> do intencji 
 
 - ListView - do ładnego wypisywania list w aplikacj	
-- entries - bierze liste co ma wyświetlić (z string value)
+- entries - bierze liste co ma wyświetlić (z string value i potem item)
 - divider - linia która odziela elementy (ustawia wartość koloru)
 - dividerHeight - ustawia grubość dividera
+
+- Spinner - lista wyboru
+- entries - bierze liste co ma wyświetlić (z string value i potem item)
+
 --------------------------- Java ---------------------------
 - java\com.example.NazwaPliku\Main.java - główny plik kodu
 
@@ -62,6 +66,7 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - R - katalog "res" (można się odwołać do wielu rzeczy)
 - obiekt = findViewById(R.id.idObiektu) -> stworzenie obiektu z elementu z XML (po odpowiedniej lini w onCreate)
 - przycisk.setOnClickListner -> new View.OnClickListner  (lepsza praktyka klikania, w onCreate trzeba zrobić)
+
   
 - onSaveInstanceState -> możliwość zapisywania rzeczy (z protected	)
 - outState.put...() -> 	wymagane zdefiniowanie co zapisujemy np putInt("ID", zmienna)
@@ -75,50 +80,16 @@ Notatka do Aplikacji Mobilnych (Android Studio)
 - startActivity(intencja) - otwiera nowe oknienko
 - zmienna = getIntent().get...Extra("KLUCZ", podstawowa wartość) ... -> typ danych
 
-- ListView.setOnItemClickListener(new AdapterView...) -> klikanie na konkretny elemnt listy
+
+- ListView.setOnItemClickListener(new AdapterView...) -> klikanie na konkretny element listy
+- ListView.setOnLongItemClickListener(new AdapterView...) -> długie kliknięcie na element listy
 
 
+ArrayAdapter<Object> = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaPrzedmiotów);
+arrayAdapter.notifyDataSetChanged();
 
+spinner.getSelectedItem() 
 
-public static ArrayList<Przepis> getKategoriePrzepisu(String kategoria) {
-        ArrayList<Przepis> filtrowanePrzepisy = new ArrayList<>();
-        if(przepisy.isEmpty()){
-            generujPrzepisy();
-        }
-        for(int i = 0; i < przepisy.size(); i++){
-            if(Objects.equals(przepisy.get(i).getKategoria(), kategoria)){
-                filtrowanePrzepisy.add(przepisy.get(i));
-            }
-        }
-        return filtrowanePrzepisy;
-    }
-    public static ArrayList<String> getNazwyPrzepisow(String kategoria) {
-        ArrayList<String> filtrowaneNazwyPrzepisow = new ArrayList<>();
-        if(przepisy.isEmpty()){
-            generujPrzepisy();
-        }
-        for(int i = 0; i < przepisy.size(); i++){
-            if(Objects.equals(przepisy.get(i).getKategoria(), kategoria)){
-                filtrowaneNazwyPrzepisow.add(przepisy.get(i).getNazwaPrzepisu());
-            }
-        }
-        return filtrowaneNazwyPrzepisow;
-    }
-
-    public static Przepis zwrocPrzepis(int id){
-        if(przepisy.isEmpty()){
-            generujPrzepisy();
-        }
-        for (Przepis przepis:przepisy){
-            if(przepis.getIdPrzepisu() == id){
-                return przepis;
-            }
-        }
-        return przepisy.get(0);
-    }
-
-
-
-
-}
+TextView stringJakis = (TextView) view;
+stringJakis.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG); -> przekreśla (0 wraca do normy tak jak 1)
 
